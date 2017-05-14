@@ -1,0 +1,34 @@
+<resources>
+    <!-- The app name -->
+    <string name="app_name">NotAtHomesApp</string>
+
+    <!-- Add button name on the MainActivity layout -->
+    <string name="ButtonAddButton">Add</string>
+
+    <!-- Delete button on the MainActivity layout -->
+    <string name="ButtonDeleteButton">Delete</string>
+
+    <!-- A test text for testing things -->
+    <string name="test">HelloWorld</string>
+
+    <!-- The page title on the inputPage layout -->
+    <string name="inputPageTitle">Just a few details…</string>
+
+    <!-- The map number textView in the inputPage layout -->
+    <string name="mapNoTextBox">Map No. =</string>
+
+    <!-- The list name textView in the inputPage layout -->
+    <string name="location">Location: </string>
+
+    <!-- The hint in the list name textView in the inputPage layout -->
+    <string name="hintText">Name</string>
+
+    <!-- The "Date:" textView in the inputPage layout -->
+    <string name="dateBox">Date:</string>
+
+    <!-- the hint in the date box -->
+    <string name="dateBoxHint">dd/mm/yyyy</string>
+
+    <!-- button on the inputPage layout -->
+    <string name="continueButton">CONTINUE</string>
+</resources>
