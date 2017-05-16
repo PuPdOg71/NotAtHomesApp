@@ -9,7 +9,7 @@
     <string name="ButtonDeleteButton">Delete</string>
 
     <!-- A test text for testing things -->
-    <string name="test">HelloWorld</string>
+    <string name="test">Test</string>
 
     <!-- The page title on the inputPage layout -->
     <string name="inputPageTitle">Just a few details…</string>
