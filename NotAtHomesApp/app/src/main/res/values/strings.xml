@@ -31,4 +31,11 @@
 
     <!-- button on the inputPage layout -->
     <string name="continueButton">CONTINUE</string>
+
+    <!-- for save button on inputScreen2 -->
+    <string name="saveButton">SAVE</string>
+
+    <!-- hint for the text box on inputPage2 -->
+    <string name="hintText2">Type your not-at-homes here…</string>
+
 </resources>

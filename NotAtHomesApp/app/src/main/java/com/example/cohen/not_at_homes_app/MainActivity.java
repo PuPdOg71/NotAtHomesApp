@@ -1,5 +1,6 @@
 package com.example.cohen.not_at_homes_app;
 
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;

@@ -11,12 +11,13 @@
         android:theme="@android:style/Theme.NoTitleBar">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".inputPage"></activity>
+        <activity android:name=".inputPage" />
+        <activity android:name=".inputPage2"></activity>
     </application>
 
 </manifest>

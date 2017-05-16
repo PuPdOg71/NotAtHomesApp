@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".inputPage"
-    android:background="#888888">
+    android:background="@color/BackgroundGrey">
 
     <TextView
         android:id="@+id/mapNo"
@@ -136,11 +136,13 @@
         app:layout_constraintVertical_bias="0.369" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="165dp"
         android:layout_height="58dp"
         android:text="@string/continueButton"
+        android:background="@drawable/buttons"
         android:layout_marginRight="8dp"
+        android:onClick="toInputScreen2"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
