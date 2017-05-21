@@ -10,7 +10,7 @@
     <!--colour for the hint text on light grey backgrounds -->
     <color name="hintTextColour2">#888888</color>
 
-    <!-- colour for all text in the inputPage layout -->
+    <!-- colour for all text in the InputPage layout -->
     <color name="textColour">#ffffff</color>
 
     <!--input page button colour -->
@@ -21,4 +21,10 @@
 
     <!-- background grey for light grey pages -->
     <color name="BackgroundGrey2">#b8b8b8</color>
+
+    <!-- For black text -->
+    <color name="blackText">#000000</color>
+
+    <!-- colour for white backgrounds -->
+    <color name="whiteBackground">#ffffff</color>
 </resources>

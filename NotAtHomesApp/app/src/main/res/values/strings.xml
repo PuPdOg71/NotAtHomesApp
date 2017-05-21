@@ -11,31 +11,31 @@
     <!-- A test text for testing things -->
     <string name="test">Test</string>
 
-    <!-- The page title on the inputPage layout -->
+    <!-- The page title on the InputPage layout -->
     <string name="inputPageTitle">Just a few details…</string>
 
-    <!-- The map number textView in the inputPage layout -->
+    <!-- The map number textView in the InputPage layout -->
     <string name="mapNoTextBox">Map No. =</string>
 
-    <!-- The list name textView in the inputPage layout -->
+    <!-- The list name textView in the InputPage layout -->
     <string name="location">Location: </string>
 
-    <!-- The hint in the list name textView in the inputPage layout -->
+    <!-- The hint in the list name textView in the InputPage layout -->
     <string name="hintText">Name</string>
 
-    <!-- The "Date:" textView in the inputPage layout -->
+    <!-- The "Date:" textView in the InputPage layout -->
     <string name="dateBox">Date:</string>
 
     <!-- the hint in the date box -->
     <string name="dateBoxHint">dd/mm/yyyy</string>
 
-    <!-- button on the inputPage layout -->
+    <!-- button on the InputPage layout -->
     <string name="continueButton">CONTINUE</string>
 
     <!-- for save button on inputScreen2 -->
     <string name="saveButton">SAVE</string>
 
-    <!-- hint for the text box on inputPage2 -->
+    <!-- hint for the text box on InputPage2 -->
     <string name="hintText2">Type your not-at-homes here…</string>
 
 </resources>

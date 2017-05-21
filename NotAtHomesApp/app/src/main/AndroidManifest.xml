@@ -16,8 +16,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".inputPage" />
-        <activity android:name=".inputPage2"></activity>
+        <activity android:name=".InputPage">
+
+        </activity>
+        <activity android:name=".InputPage2">
+
+        </activity>
     </application>
 
 </manifest>

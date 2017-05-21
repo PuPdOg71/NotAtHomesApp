@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".inputPage2"
+    tools:context=".InputPage2"
     android:background="#ffffff"
     tools:layout_editor_absoluteY="25dp"
     tools:layout_editor_absoluteX="0dp"
@@ -14,7 +14,7 @@
     <Button
         android:onClick="toSaveField"
         android:id="@+id/saveButton1"
-        android:layout_width="169dp"
+        android:layout_width="341dp"
         android:layout_height="70dp"
         android:background="@drawable/buttons"
         android:text="@string/saveButton"
@@ -28,16 +28,16 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintVertical_bias="0.99"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintVertical_bias="1.0"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />
 
 
     <EditText
         android:id="@+id/textNotAtHomes"
-        android:layout_width="344dp"
-        android:layout_height="516dp"
+        android:layout_width="346dp"
+        android:layout_height="477dp"
         android:ems="10"
         android:background="@color/hintTextColour"
         android:inputType="textMultiLine"
@@ -53,26 +53,24 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.303" />
 
-    <Button
-        android:id="@+id/button76"
-        android:onClick="toTest"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:text="@string/test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
+    <TextView
+        android:id="@+id/ListName"
+        android:layout_width="344dp"
+        android:layout_height="37dp"
+        android:textColor="@color/blackText"
+        android:background="@color/whiteBackground"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="@+id/saveButton1"
+        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintVertical_bias="0.998"
-        tools:layout_editor_absoluteX="14dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

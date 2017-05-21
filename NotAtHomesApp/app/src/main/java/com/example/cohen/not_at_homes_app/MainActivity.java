@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this, inputPage.class);
+                Intent intent1 = new Intent(MainActivity.this, InputPage.class);
                 startActivity(intent1);
             }
         });
