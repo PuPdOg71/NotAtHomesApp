@@ -8,11 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 
 public class InputPage extends Activity {
-    public String name;
+    private EditText location;
+//    private EditText noInput;
+//    private EditText dateBox;
+//    TODO: add functionality
+
 
     public InputPage() {
 
@@ -23,21 +26,9 @@ public class InputPage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_page );
         Button button = (Button)findViewById(R.id.addButton);
-    }
-
-
-    public InputPage(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-    public String name(String name){
-        this.name = name;
-        EditText editText = (EditText)findViewById(R.id.location);
-        String value = editText.getText().toString();
-        return value;
+        location = (EditText)findViewById(R.id.location);
+//        noInput = (EditText)findViewById(R.id.noInput);
+//        dateBox = (EditText)findViewById(R.id.noInput);
 
     }
 
@@ -47,12 +38,13 @@ public class InputPage extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(InputPage.this, InputPage2.class);
+                intent2.putExtra("location", location.getText().toString());
                 startActivity(intent2);
-
             }
         });
     }
-
-
 }
+
+
+
 

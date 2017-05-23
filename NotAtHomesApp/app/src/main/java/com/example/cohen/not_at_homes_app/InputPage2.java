@@ -19,16 +19,18 @@ import java.io.OutputStreamWriter;
 
 
 
-
-
-
 public class InputPage2 extends Activity  {
 
-    Button saveButton1;
-    EditText message;
-    String Message;
-    TextView[] pairs;
+    private Button saveButton1;
+    private EditText message;
+    private String Message;
+    private TextView[] pairs;
     int num_match;
+    private TextView ListName;
+    private String location;
+
+
+
 
 
 
@@ -53,10 +55,14 @@ public class InputPage2 extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_page2);
         message = (EditText) findViewById(R.id.textNotAtHomes);
-        InputPage inputPage = new InputPage();
-        String name = inputPage.name;
-        TextView textView2 = (TextView) findViewById(R.id.ListName);
-        textView2.setText(name);
+        TextView txt1 = (TextView)findViewById(R.id.ListName);
+
+        Intent intent2 = this.getIntent();
+
+        location = intent2.getStringExtra("location");
+        txt1.setText(String.valueOf(location));
+        Toast.makeText(getBaseContext(), location, Toast.LENGTH_LONG).show();
+
     }
 
     public void toSaveField(View v) {
@@ -77,7 +83,7 @@ public class InputPage2 extends Activity  {
                 osw.write(Message);
                 osw.flush();
                 osw.close();
-                Toast.makeText(getBaseContext(), "Saved successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Note: " + location + " was saved successfully", Toast.LENGTH_LONG).show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -101,11 +107,6 @@ public class InputPage2 extends Activity  {
             linearLayout.addView(pairs[1]);
 
         }
-    }
-
-
-    public void printName(String name){
-
     }
 }
 

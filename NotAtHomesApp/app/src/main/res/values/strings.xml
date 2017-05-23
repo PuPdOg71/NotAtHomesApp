@@ -38,4 +38,7 @@
     <!-- hint for the text box on InputPage2 -->
     <string name="hintText2">Type your not-at-homes here…</string>
 
+    <!-- for the title of the inputPage2 layout -->
+    <string name="theLocation">Location</string>
+
 </resources>
