@@ -21,17 +21,10 @@ import java.io.OutputStreamWriter;
 
 public class InputPage2 extends Activity  {
 
-    private Button saveButton1;
     private EditText message;
-    private String Message;
     private TextView[] pairs;
     int num_match;
-    private TextView ListName;
     private String location;
-
-
-
-
 
 
     public TextView[] getPairs() {
@@ -55,18 +48,25 @@ public class InputPage2 extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_page2);
         message = (EditText) findViewById(R.id.textNotAtHomes);
-        TextView txt1 = (TextView)findViewById(R.id.ListName);
+        TextView listName = (TextView)findViewById(R.id.ListName);
+        TextView mapNoDisplay = (TextView)findViewById(R.id.mapNoDisplay);
+        TextView dateDisplay = (TextView)findViewById(R.id.dateDisplay);
 
         Intent intent2 = this.getIntent();
 
         location = intent2.getStringExtra("location");
-        txt1.setText(String.valueOf(location));
-        Toast.makeText(getBaseContext(), location, Toast.LENGTH_LONG).show();
+        String mapV = intent2.getStringExtra("map");
+        String dateV = intent2.getStringExtra("date");
+
+        listName.setText(String.valueOf("Area: " + location));
+        mapNoDisplay.setText(String.valueOf("Map no: " + mapV));
+        dateDisplay.setText(String.valueOf("Date: " + dateV));
+
 
     }
 
     public void toSaveField(View v) {
-        saveButton1 = (Button) findViewById(R.id.saveButton1);
+        Button saveButton1 = (Button) findViewById(R.id.saveButton1);
         saveButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,12 +75,12 @@ public class InputPage2 extends Activity  {
         });
 
 
-        Message = message.getText().toString();
+        String message1 = message.getText().toString();
         try {
-            FileOutputStream fos = openFileOutput("Text.txt", MODE_WORLD_READABLE);
+            FileOutputStream fos = openFileOutput("notathomesapp", MODE_WORLD_READABLE);
             OutputStreamWriter osw = new OutputStreamWriter(fos);
             try {
-                osw.write(Message);
+                osw.write(message1);
                 osw.flush();
                 osw.close();
                 Toast.makeText(getBaseContext(), "Note: " + location + " was saved successfully", Toast.LENGTH_LONG).show();
@@ -95,18 +95,20 @@ public class InputPage2 extends Activity  {
         startActivity(intent2);
     }
 
-    public void linearLayout(TextView[] pairs, int num_match) {
+    public void linearLayout(int num_match) {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-        pairs = new TextView[num_match + 1];
+        TextView[] pairs = new TextView[num_match + 1];
         for (int l = 1; l <= num_match; l++) {
             pairs[1].setTextSize(15);
             pairs[1].setLayoutParams(layoutParams);
             pairs[1].setId(l);
+            pairs[1].setText(location);
             linearLayout.addView(pairs[1]);
 
         }
     }
+
 }
 

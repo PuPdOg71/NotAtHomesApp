@@ -12,9 +12,9 @@ import android.widget.EditText;
 
 public class InputPage extends Activity {
     private EditText location;
-//    private EditText noInput;
-//    private EditText dateBox;
-//    TODO: add functionality
+    private EditText mapV;
+    private EditText dateV;
+
 
 
     public InputPage() {
@@ -27,8 +27,10 @@ public class InputPage extends Activity {
         setContentView(R.layout.activity_input_page );
         Button button = (Button)findViewById(R.id.addButton);
         location = (EditText)findViewById(R.id.location);
-//        noInput = (EditText)findViewById(R.id.noInput);
-//        dateBox = (EditText)findViewById(R.id.noInput);
+        mapV = (EditText)findViewById(R.id.mapNoInput);
+        dateV = (EditText)findViewById(R.id.dateBox);
+
+
 
     }
 
@@ -39,6 +41,9 @@ public class InputPage extends Activity {
             public void onClick(View v) {
                 Intent intent2 = new Intent(InputPage.this, InputPage2.class);
                 intent2.putExtra("location", location.getText().toString());
+                intent2.putExtra("map", mapV.getText().toString());
+                intent2.putExtra("date", dateV.getText().toString());
+
                 startActivity(intent2);
             }
         });

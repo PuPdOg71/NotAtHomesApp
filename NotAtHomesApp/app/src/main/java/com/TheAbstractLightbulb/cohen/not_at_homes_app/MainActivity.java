@@ -10,6 +10,8 @@ import android.view.View;
 
 
 
+
+
 public class MainActivity extends Activity {
 
 
@@ -21,8 +23,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void toInputScreen(View view){
-        Button addButton = (Button)findViewById(R.id.addButton);
+    public void toInputScreen(View view) {
+        Button addButton = (Button) findViewById(R.id.addButton);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +32,5 @@ public class MainActivity extends Activity {
                 startActivity(intent1);
             }
         });
-
     }
 }
