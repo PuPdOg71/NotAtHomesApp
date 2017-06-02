@@ -1,4 +1,4 @@
-package com.example.cohen.not_at_homes_app;
+package com.TheAbstractLightbulb.cohen.not_at_homes_app;
 
 
 

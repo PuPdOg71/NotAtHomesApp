@@ -41,4 +41,15 @@
     <!-- for the title of the inputPage2 layout -->
     <string name="theLocation">Location</string>
 
+    <!-- for the delete screen hint -->
+    <string name="toDelete">Name</string>
+
+    <!-- for the delete button text-->
+    <string name="deleteButtonText">Delete</string>
+
+    <!-- for the instructions on deleteNote activity -->
+    <string name="hintTextForDeleteNote">To delete a note, type the name of the note into the box below and press delete!</string>
+    <string name="secondHalf">WARNING: A note cannot be recovered after being deleted.</string>
+
+
 </resources>

@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.01999998" />
 
     <EditText
-        android:id="@+id/noInput"
+        android:id="@+id/mapNoInput"
         android:layout_width="48dp"
         android:layout_height="39dp"
         android:ems="10"

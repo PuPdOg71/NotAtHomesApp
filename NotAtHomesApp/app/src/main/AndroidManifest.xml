@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cohen.not_at_homes_app">
+    package="com.TheAbstractLightbulb.cohen.not_at_homes_app">
 
     <application
         android:allowBackup="true"
@@ -16,12 +16,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".InputPage">
-
-        </activity>
-        <activity android:name=".InputPage2">
-
-        </activity>
+        <activity android:name=".InputPage" />
+        <activity android:name=".InputPage2" />
     </application>
 
 </manifest>

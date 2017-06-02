@@ -1,4 +1,4 @@
-package com.example.cohen.not_at_homes_app;
+package com.TheAbstractLightbulb.cohen.not_at_homes_app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.cohen.notathomesapp", appContext.getPackageName());
+        assertEquals("com.TheAbstractLightbulb.cohen.notathomesapp", appContext.getPackageName());
     }
 }
