@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.nfc.Tag;
 import android.util.Log;
 
 /**
@@ -30,7 +29,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT,Map_no INTEGER,Location TEXT,Date INTEGER,Not_at_homes TEXT)");
+        db.execSQL("create table " + TABLE_NAME + " WHERE " + ID + " = INTEGER PRIMARY KEY AUTOINCREMENT,Map_no INTEGER,Location TEXT,Date INTEGER,Not_at_homes TEXT)");
 
     }
 
@@ -55,11 +54,6 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
         }
 
-    }
-
-    public Integer delete(String LOCATION) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(TABLE_NAME, "ID = ?", new String[]{LOCATION});
 
     }
 
@@ -73,11 +67,10 @@ public class DBHelper extends SQLiteOpenHelper {
     public Cursor getItemID(String map, String location, String date, String notAtHomes) {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT " + ID + " FROM " + TABLE_NAME +
-                " WHERE " + MAP_NO + " = '" + map + "'" + LOCATION + " = '" + location + "'"
-                + DATE + " = '" + date + "'"
+                " WHERE " + MAP_NO + " = '" + map + "'" + " AND " + LOCATION + " = '" + location + "'" +
+                " AND " + DATE + " = '" + date + "'" + " AND "
                 + NOTATHOMES + " = '" + notAtHomes + "'";
-        Cursor data;
-        data = db.rawQuery(query, null);
+        Cursor data = db.rawQuery(query, null);
         return data;
     }
 

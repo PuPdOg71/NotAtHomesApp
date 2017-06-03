@@ -49,18 +49,6 @@ public class MainActivity extends Activity {
         });
     }
 
-    public void toDelete(View view) {
-        Button deleteButton = (Button) findViewById(R.id.deleteButton1);
-        deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(MainActivity.this, EditData.class);
-                startActivity(intent2);
-            }
-        });
-
-    }
-
     private void populateListView() {
         Log.d(TAG, "populateListView: Displaying data in list view.");
         final Cursor data = dbHelper.getData();
@@ -74,7 +62,7 @@ public class MainActivity extends Activity {
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String map = adapterView.getItemAtPosition(i).toString();
                 String name = adapterView.getItemAtPosition(i).toString();
                 String date = adapterView.getItemAtPosition(i).toString();
