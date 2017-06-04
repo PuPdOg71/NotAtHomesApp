@@ -66,7 +66,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getItemID(String map, String location, String date, String notAtHomes) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT " + ID + " FROM " + TABLE_NAME +
+        String query = "SELECT ID FROM " + TABLE_NAME +
                 " WHERE " + MAP_NO + " = '" + map + "'" + " AND " + LOCATION + " = '" + location + "'" +
                 " AND " + DATE + " = '" + date + "'" + " AND "
                 + NOTATHOMES + " = '" + notAtHomes + "'";
