@@ -6,7 +6,7 @@
     <string name="ButtonAddButton">Add</string>
 
     <!-- Delete button on the MainActivity layout -->
-    <string name="ButtonDeleteButton">Delete</string>
+    <string name="ButtonDeleteButton">DELETE</string>
 
     <!-- A test text for testing things -->
     <string name="test">Test</string>
@@ -45,11 +45,23 @@
     <string name="toDelete">Name</string>
 
     <!-- for the delete button text-->
-    <string name="deleteButtonText">Delete</string>
+    <string name="deleteButtonText">DELETE</string>
 
     <!-- for the instructions on deleteNote activity -->
     <string name="hintTextForDeleteNote">To delete a note, type the name of the note into the box below and press delete!</string>
     <string name="secondHalf">WARNING: A note cannot be recovered after being deleted.</string>
+
+    <!-- for the text on the sent button -->
+    <string name="sendButtonText">SEND</string>
+    
+    <!-- for the send button on the send record screen -->
+    <string name="sendTextMessage">Send Message</string>
+
+    <!-- for the hint in the send record screen -->
+    <string name="phoneNumber">Phone Number</string>
+
+    <!-- hint for phone number edittext-->
+    <string name="phoneNumberHint">Enter number</string>
 
 
 </resources>

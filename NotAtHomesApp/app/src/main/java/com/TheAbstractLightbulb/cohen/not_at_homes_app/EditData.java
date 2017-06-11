@@ -101,5 +101,17 @@ public class EditData extends Activity {
         });
         }
 
+        private void toSendNote(View view){
+            Button sendButton = (Button)findViewById(R.id.sendButton);
+            sendButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent1 = new Intent(EditData.this, SendRecord.class);
+                    intent1.putExtra("Note", selectedNotAtHomes);
+                    startActivity(intent1);
+                }
+            });
+        }
+
     }
 

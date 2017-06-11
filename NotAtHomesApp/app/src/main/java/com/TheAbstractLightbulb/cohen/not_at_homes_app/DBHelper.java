@@ -18,7 +18,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String LOCATION = "Location";
     public static final String DATE = "Date";
     public static final String NOTATHOMES = "Not_at_homes";
-    public static final Integer ID = 1;
+    public static final String ID = "ID";
     public static final String TAG = "DBHelper";
 
 
@@ -29,8 +29,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME + " WHERE " + ID + " = INTEGER PRIMARY KEY AUTOINCREMENT,Map_no INTEGER,Location TEXT,Date INTEGER,Not_at_homes TEXT)");
-
+       String createTable = "CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, " + MAP_NO + " INTEGER, " + LOCATION + " TEXT, " + DATE + " INTEGER, " + NOTATHOMES + " TEXT)";
+        db.execSQL(createTable);
     }
 
     @Override
@@ -47,6 +47,9 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put(LOCATION, Location);
         contentValues.put(DATE, Date);
         contentValues.put(NOTATHOMES, Not_at_homes);
+
+        Log.d(TAG, "addData: Adding " + Location + " to " + TABLE_NAME);
+
         long result = db.insert(TABLE_NAME, null, contentValues);
         if (result == -1) {
             return false;
