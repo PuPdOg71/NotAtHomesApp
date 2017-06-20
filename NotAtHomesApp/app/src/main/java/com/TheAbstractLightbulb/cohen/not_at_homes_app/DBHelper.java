@@ -21,6 +21,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String ID = "ID";
     public static final String TAG = "DBHelper";
 
+    private static DBHelper instance = null;
+    public static DBHelper getInstance(Context context){
+        if (instance == null){
+            instance =  new DBHelper(context.getApplicationContext());
+        }
+        return instance;
+    }
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -69,9 +76,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getItemID(String map, String location, String date, String notAtHomes) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT ID FROM " + TABLE_NAME +
-                " WHERE " + MAP_NO + " = '" + map + "'" + " AND " + LOCATION + " = '" + location + "'" +
-                " AND " + DATE + " = '" + date + "'" + " AND "
+        String query = "SELECT " + ID + " FROM " + TABLE_NAME +
+                " WHERE " + MAP_NO + " = '" + map + "' AND " + LOCATION + " = '" + location +
+                "' AND " + DATE + " = '" + date + "' AND "
                 + NOTATHOMES + " = '" + notAtHomes + "'";
         Cursor data = db.rawQuery(query, null);
         return data;
@@ -104,6 +111,7 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d(TAG, "deleting: query: " + query);
         Log.d(TAG, "deleting: Deleting note with values: Map number: " + mapNo + " Location: " + location + " Created on: " + date + " With notes: " + notAtHomes + ".");
         database.execSQL(query);
+
     }
 }
 

@@ -11,17 +11,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
-    DBHelper dbHelper;
+    private DBHelper dbHelper;
+    private NewListAdapter newListAdapter;
 
     public MainActivity() {
     }
@@ -33,10 +33,13 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_main);
         dbHelper = new DBHelper(this);
-
-
         populateListView();
+
+
+
+
     }
+
 
     public void toInputScreen(View view) {
         Button addButton = (Button) findViewById(R.id.addButton);
@@ -55,18 +58,22 @@ public class MainActivity extends Activity {
         ArrayList<String> listData = new ArrayList<>();
         while (data.moveToNext()) {
             listData.add(data.getString(2));
-        }
-        ListView listview = (ListView) findViewById(R.id.MainListView);
-        final ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
-        listview.setAdapter(adapter);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        }
+        ListView MainListView = (ListView)findViewById(R.id.MainListView);
+        dbHelper = DBHelper.getInstance(getApplicationContext());
+        Cursor cursor = dbHelper.getData();
+        if (cursor != null){
+            newListAdapter = new  NewListAdapter(getApplicationContext(), cursor, 0);
+            MainListView.setAdapter(newListAdapter);
+        MainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String map = adapterView.getItemAtPosition(i).toString();
-                String name = adapterView.getItemAtPosition(i).toString();
-                String date = adapterView.getItemAtPosition(i).toString();
-                String notAtHomes = adapterView.getItemAtPosition(i).toString();
+                long ID = (int) adapterView.getItemIdAtPosition(0);
+                String map = adapterView.getItemAtPosition(1).toString();
+                String name = adapterView.getItemAtPosition(2).toString();
+                String date = adapterView.getItemAtPosition(3).toString();
+                String notAtHomes = adapterView.getItemAtPosition(4).toString();
                 Log.d(TAG, "onItemClick: You Clicked on " + notAtHomes);
 
                 Cursor data = dbHelper.getItemID(map, name, date, notAtHomes);
@@ -83,8 +90,8 @@ public class MainActivity extends Activity {
                     editDataIntent.putExtra("date", date);
                     editDataIntent.putExtra("notAtHomes", notAtHomes);
                     startActivity(editDataIntent);
-                } else {
-                    Toast.makeText(getBaseContext(), "No ID associated with that name", Toast.LENGTH_LONG).show();
+//                } else {
+//                    Toast.makeText(getBaseContext(), "No ID associated with that name", Toast.LENGTH_LONG).show();
                 }
 
 
