@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--colour for the hint text -->
+    <color name="hintTextColour">#b8b8b8</color>
+
+    <!--colour for the hint text on light grey backgrounds -->
+    <color name="hintTextColour2">#888888</color>
+
+    <!-- colour for all text in the InputPage layout -->
+    <color name="textColour">#ffffff</color>
+
+    <!--input page button colour -->
+    <color name="buttonColour764">#c8c8c8</color>
+
+    <!-- Background colour for grey pages -->
+    <color name="BackgroundGrey">#888888</color>
+
+    <!-- background grey for light grey pages -->
+    <color name="BackgroundGrey2">#b8b8b8</color>
+
+    <!-- For black text -->
+    <color name="blackText">#000000</color>
+
+    <!-- colour for white backgrounds -->
+    <color name="whiteBackground">#ffffff</color>
+</resources>

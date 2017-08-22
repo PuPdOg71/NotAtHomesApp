@@ -18,7 +18,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="449dp"
-        android:onClick="toInputScreen"
+        android:onClick="toInput"
         android:background="@drawable/buttons"
         android:text="@string/ButtonAddButton"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ListView
-        android:id="@+id/MainListView"
+        android:id="@+id/list"
         android:layout_width="336dp"
         android:layout_height="521dp"
         android:layout_marginBottom="8dp"

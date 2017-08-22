@@ -1,0 +1,67 @@
+<resources>
+    <!-- The app name -->
+    <string name="app_name">NotAtHomesApp</string>
+
+    <!-- Add button name on the MainActivity layout -->
+    <string name="ButtonAddButton">Add</string>
+
+    <!-- Delete button on the MainActivity layout -->
+    <string name="ButtonDeleteButton">DELETE</string>
+
+    <!-- A test text for testing things -->
+    <string name="test">Test</string>
+
+    <!-- The page title on the InputPage layout -->
+    <string name="inputPageTitle">Just a few details…</string>
+
+    <!-- The map number textView in the InputPage layout -->
+    <string name="mapNoTextBox">Map No. =</string>
+
+    <!-- The list name textView in the InputPage layout -->
+    <string name="location">Location: </string>
+
+    <!-- The hint in the list name textView in the InputPage layout -->
+    <string name="hintText">Name</string>
+
+    <!-- The "Date:" textView in the InputPage layout -->
+    <string name="dateBox">Date:</string>
+
+    <!-- the hint in the date box -->
+    <string name="dateBoxHint">dd/mm/yyyy</string>
+
+    <!-- button on the InputPage layout -->
+    <string name="continueButton">CONTINUE</string>
+
+    <!-- for save button on inputScreen2 -->
+    <string name="saveButton">SAVE</string>
+
+    <!-- hint for the text box on InputPage2 -->
+    <string name="hintText2">Type your not-at-homes here…</string>
+
+    <!-- for the title of the inputPage2 layout -->
+    <string name="theLocation">Location</string>
+
+    <!-- for the delete screen hint -->
+    <string name="toDelete">Name</string>
+
+    <!-- for the delete button text-->
+    <string name="deleteButtonText">DELETE</string>
+
+    <!-- for the instructions on deleteNote activity -->
+    <string name="hintTextForDeleteNote">To delete a note, type the name of the note into the box below and press delete!</string>
+    <string name="secondHalf">WARNING: A note cannot be recovered after being deleted.</string>
+
+    <!-- for the text on the sent button -->
+    <string name="sendButtonText">SEND</string>
+    
+    <!-- for the send button on the send record screen -->
+    <string name="sendTextMessage">Send Message</string>
+
+    <!-- for the hint in the send record screen -->
+    <string name="phoneNumber">Phone Number</string>
+
+    <!-- hint for phone number edittext-->
+    <string name="phoneNumberHint">Enter number</string>
+
+
+</resources>

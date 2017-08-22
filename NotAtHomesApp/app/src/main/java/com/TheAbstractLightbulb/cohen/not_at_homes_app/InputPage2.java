@@ -15,13 +15,12 @@ import android.widget.Toast;
 
 
 public class InputPage2 extends Activity {
+    private String sid;
     private String location;
     private String mapV;
     private String dateV;
     private EditText not_at_homes;
     DBHelper dbHelper;
-
-
 
 
     @Override
@@ -31,13 +30,13 @@ public class InputPage2 extends Activity {
         TextView listName = (TextView) findViewById(R.id.ListName);
         TextView mapNoDisplay = (TextView) findViewById(R.id.mapNoDisplay);
         TextView dateDisplay = (TextView) findViewById(R.id.dateDisplay);
-        not_at_homes = (EditText)findViewById(R.id.textNotAtHomes);
+        not_at_homes = (EditText) findViewById(R.id.textNotAtHomes);
 
 
         dbHelper = new DBHelper(this);
 
         Intent intent2 = this.getIntent();
-
+        sid = intent2.getStringExtra("UUID");
         location = intent2.getStringExtra("location");
         mapV = intent2.getStringExtra("map");
         dateV = intent2.getStringExtra("date");
@@ -48,30 +47,20 @@ public class InputPage2 extends Activity {
         dateDisplay.setText(String.valueOf("Date: " + dateV));
 
 
-
-
-
-
     }
 
 
     public void toSaveField(View v) {
         Button saveButton1 = (Button) findViewById(R.id.saveButton1);
-        saveButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dbHelper.insertData(mapV, location, dateV, not_at_homes.getText().toString());
-                Intent intent = new Intent(InputPage2.this, MainActivity.class);
-                startActivity(intent);
-                Toast.makeText(getBaseContext(), "Note: " + location + " was saved successfully", Toast.LENGTH_LONG).show();
-
-
-            }
-
-
-        });
+        dbHelper.insertData(sid, mapV, location, dateV, not_at_homes.getText().toString());
+        Intent intent = new Intent(InputPage2.this, MainActivity.class);
+        startActivity(intent);
+        Toast.makeText(getBaseContext(), location + " was saved successfully", Toast.LENGTH_LONG).show();
 
 
     }
+
+
 }
+
 

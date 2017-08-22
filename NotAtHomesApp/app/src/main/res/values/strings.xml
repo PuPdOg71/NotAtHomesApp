@@ -63,5 +63,8 @@
     <!-- hint for phone number edittext-->
     <string name="phoneNumberHint">Enter number</string>
 
+    <!-- onClick for addbutton main activity -->
+    <string name="toInputPage">toInputPage</string>
+
 
 </resources>

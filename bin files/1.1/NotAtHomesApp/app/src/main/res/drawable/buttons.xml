@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Defining the colour of the shape -->
+    <solid android:color="@color/buttonColour764"/>
+
+    <!-- Defining the colour of the boarder -->
+    <stroke android:width="3dp"
+        android:color="@color/buttonColour764"/>
+
+    <!-- To keep the text in line -->
+    <padding
+        android:left="4dp"
+        android:bottom="4dp"
+        android:right="4dp"
+        android:top="4dp"
+        />
+
+    <corners android:radius="10dp"/>
+
+</shape>

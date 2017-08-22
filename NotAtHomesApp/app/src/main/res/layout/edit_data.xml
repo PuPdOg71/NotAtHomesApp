@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/sendButton"
+        android:id="@+id/toSendScreen"
         android:layout_width="110dp"
         android:layout_height="66dp"
         android:layout_marginBottom="8dp"
@@ -61,7 +61,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/buttons"
-        android:onClick="toSendNote"
+        android:onClick="toSend"
         android:text="@string/sendButtonText"
         android:textSize="16sp"
         android:textStyle="bold"

@@ -21,7 +21,7 @@ public class NewListAdapter extends CursorAdapter {
 
     public void bindView(View view, Context context, Cursor cursor){
         EditText location  = (EditText)view.findViewById(R.id.ListName2);
-        String name = cursor.getString(cursor.getColumnIndex("LOCATION"));
+        String name = cursor.getString(cursor.getColumnIndex("Locatin"));
         location.setText(name);
     }
 
